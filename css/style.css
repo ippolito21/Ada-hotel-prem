@@ -1,0 +1,181 @@
+footer, header, menu, nav, section{
+  display: block;
+}
+
+body{
+    line-height: 1em;
+}
+ul{
+  list-style: none;
+}
+
+/*header pour touutes les pages*/
+header{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image:url(../images/.jpg);
+  background-repeat: no-repeat;
+  height: 14em;
+}
+
+.paires{
+  color:  green;
+  font-family: cursive sans-serif arial serif;
+  font-style: normal;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 1px 1px 1px #4a4a4a;
+  border-radius: 10px;
+  padding-left:10px;
+  padding-bottom: 2px;
+  padding-right: 10px;
+
+}
+.paires:hover{
+  background-color: violet;
+}
+
+.text{
+  display: flex;
+  list-style-type: none;
+  text-align: justify;
+  padding:0.5em;
+}
+
+.groupes{
+  display:flex;
+  flex-direction:row;
+  justify-content: space-between;
+  margin: auto;
+  width: 100%;
+}
+
+#chambres{
+  display: flex;
+}
+.quartier{
+  background-image:url("../images/")
+}
+
+
+
+
+
+/*.burger{
+  background-image: url('images/hall.jpg');
+  background-repeat: no-repeat;
+  max-width:100%;
+  height: 400px;
+  background-size:cover
+  }*/
+
+
+.image-hôtel{
+  display: block;
+  width:100%;
+  height:700px;
+  margin: 0;
+
+}
+
+
+
+/*bannière en entête image de fond, 1ère image a l'horizontal, permet de mettre l'image côte à côte*/
+#mission {
+  width: 100%;
+  display:flex;
+}
+
+.travail,
+.working {
+  width:50%;/*deux images 100/2=50*/
+  height:auto;
+  margin:0;
+  padding:0;
+  display: block;
+}
+
+/*mettre le text sur l'image */
+.debut{
+  display:inline-block;
+  position: relative;
+
+}
+.debut {
+  position: absolute;
+  text-align:center;
+  font-family: georgia;
+  font-size: 19px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: rgb(0, 0, 0,);
+  color: black;
+  margin-top: 3%;
+}
+
+/*text sur une image*/
+.debut .content{
+  position: absolute;
+  bottom:0;
+  background: rgb(0, 0, 0,);
+  background: rgb(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+.debut img{ vertical-align:middle;}
+/*fin text sur image*/
+
+
+
+/*mettre le text sur l'image */
+.debut{
+  display:inline-block;
+  position: relative;
+
+}
+.debut .text{
+  position: absolute;
+  text-align:center;
+  font-family: georgia;
+  font-size: 19px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: rgb(0, 0, 0,);
+  color: black;
+  margin-top: 3%;
+}
+/*text sur une image*/
+.debut .content{
+  position: absolute;
+  bottom:0;
+  background: rgb(0, 0, 0,);
+  background: rgb(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+.debut img{ vertical-align:middle;}
+/*fin text sur image*/
+
+
+
+
+
+/*flottement d'images, trois contenaires d'images;100/3=33,33%; deux images(100/2=50%) et 4 images(100/4=25%)*/
+*{
+  box-sizing: border-box;
+}
+.column{
+  float: left;/*propriété float images cote à cote*/
+  width: 33.33%;
+  padding: 5px;
+}
+.row {
+  display: flex;
+}
+/*fin des galeries d'images*/
+/*fin du bloc container */
+/*style les deux images en entêtes*/

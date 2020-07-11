@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+
+		<link rel="stylesheet" href="../css/style.css" />
+		<!-- GOOGLE FONTS -->
+		<link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Advent+Pro&display=swap" rel="stylesheet">
+
+		<title>Ada Hotel</title>
+	</head>
+	<body>
+      <div class="header">
+
+      <section id="mission"><!--images en entêtes doivent-être collés entre elles a l'horizontal-->
+        <img  class="travail" src="images/hotel22.jpg" alt="photo de l'hotel"style=max-width:"100%" height="400px";>
+          <img  class="working" src="images/hotel.jpg" alt="photo hôtel"style=max-width:"100%" height="400px";>
+      </section>
+			<h1>Réservations</h1>
+			<nav>
+				<ul class="text">
+					<li><a class="paires" href="index.html">Accueil</a></li>
+					<li><a class="paires" href="chambres.html">Chambres</a></li>
+					<li><a class="paires" href="reservation.html">Réservation</a></li>
+					<li><a class="paires" href="quartier.html">Quartier</a></li>
+					<li><a class="paires" href="service.html">Service</a></li>
+					<li><a class="paires" href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section class="gauche"><!-resevationForm->
+			<form>
+				<fieldset>
+					<h2>Vos coordonnées</h2>
+					<ul>
+						<li><label>Prénom : </label><input type="text" name="prénom" value=""></li>
+						<li><label>Nom : </label><input type="text" name="nom" value=""></li>
+						<li><label for="woman">Femme </label><input type="radio" name="gender" value="femme" id="woman">
+						<label for="man">Homme </label><input type="radio" name="gender" value="homme" id="man">
+						<li><label>E-mail : </label><input type="email" name="" value=""></li>
+						<li><label>Téléphone : </label><input type="tel" name="" value=""></li>
+						<li><label>Copie de votre carte d'identité ou passeport : </label><input type="file" name="" value=""></li>
+						<li><label>Commentaire : </label></br><textarea name="name" rows="2" cols="100" placeholder="texte"></textarea></li>
+						<li><h3>Carte de fidélité :</h3>
+
+							<label for="oui">Oui </label><input type="radio" name="code" value="oui" id="oui">
+							<label>Numéro : </label><input type="text" name="numero" value=""></br>							<label for="non">Non </label><input type="radio" name="code" value="oui" id="non">
+						</li>
+					</ul>
+					<p class="center"><a href="#" class="myButton">Valider</a></p>
+				</fieldset>
+				<fieldset>
+					<h2>Votre séjour</h2>
+					<ul>
+						<li><label>Date d'arrivée : </label><input type="date" name="date" value=""></li>
+						<li><label>Adultes : </label><input type="number" name="adultes" value=""></li>
+						<li><label>Enfants de moins de 10 ans : </label><input type="number" name="enfants" value=""></li>
+						<li><label>Nombre de nuits : </label><input type="number" name="nombredenuitees" value=""></li>
+						<li><h3>Choix de chambre :</h3>
+							<select class="" name="">
+								<option value="">Chambre 1</option>
+								<option value="">Chambre 2</option>
+								<option value="">Chambre 3</option>
+							</select>
+						</li>
+					</ul>
+				</fieldset>
+				<fieldset>
+					<h2>Paiement</h2>
+					<ul>
+						<li>
+							<h3>Informations CB</h3>
+							<h2>de carte bancaire type visa</h2>
+						</li>
+
+            <li><label for=nom_porteur>Nom de l'utilisateur de la carte  : </label><input id=nom_porteur name=nom_porteur type=text placeholder="Même nom que sur la carte"></li>
+						<li><label for=numero_de_carte : >N° de carte : </label><input id=numero_de_carte name=numero_de_carte type=number required></li>
+						<li><label for=date_de_validite>Date de validité : </label><input type="month" name="start" min="2020-03" value="2022-05"></li>
+						<li><label for=securite>Code sécurité de la carte : </label><input id=securite name=securite type=number placeholder="3 chiffres au dos" required></li>
+					</ul>
+					<p class="center"><a href="#" class="myButton">Je valide le règlement de mon séjour</a></p>
+				</fieldset>
+			</form>
+
+		</section>
+		<footer>
+			<p>contact@2020AdaHotelServices.</p>
+		</footer>
+	</body>
+</html>
