@@ -1,74 +1,121 @@
-footer, header, menu, nav, section{
+footer, menu, section{
   display: block;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
 }
 
 body{
     line-height: 1em;
+    margin: 0;
+	display: flex; /*Pour permettre au footer d'etre tout en bas*/
+	flex-direction: column; /*Pour permettre au footer d'etre tout en bas*/
 }
+
 ul{
-  list-style: none;
+	list-style: none;
+	padding: 0;
+	width: 60%;
+	margin-left: 20%;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 /*header pour touutes les pages*/
 header{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-image:url(../images/.jpg);
-  background-repeat: no-repeat;
-  height: 14em;
+	width: 100%;
+	position: fixed;
+	left: 50%;
+	margin-left: -50%;
+	background: white;
+}
+
+ul, li, a
+{
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+}
+
+li
+{
+	margin: 0 auto;
+}
+
+#actual
+{
+	text-decoration: underline #000;
+	font-weight: bold;
+	font-size: 1.4em;
+}
+
+#hotel_name
+{
+	font-size: 2.5em;
+	text-align: center;
+	padding-bottom: 0;
+	margin-bottom: 1%;
 }
 
 .paires{
-  color:  green;
-  font-family: cursive sans-serif arial serif;
-  font-style: normal;
-  background-color: rgba(255, 255, 255, 0.5);
-  box-shadow: 1px 1px 1px #4a4a4a;
-  border-radius: 10px;
-  padding-left:10px;
-  padding-bottom: 2px;
-  padding-right: 10px;
-
+	color:  green;
+	font-style: normal;
+	font-size: 1.2em;
 }
+
 .paires:hover{
-  background-color: violet;
+  color: violet;
 }
 
-.text{
-  display: flex;
-  list-style-type: none;
-  text-align: justify;
-  padding:0.5em;
+/* Pour decaler les photos quand la resolution le permet */
+@media only screen and (min-width: 800px)
+{
+	#chambre1, #chambre2, #chambre3
+	{
+		width: 52%;
+		height: auto;
+	}
+
+	#chambre2
+	{
+		float: right;
+	}
 }
 
-.groupes{
-  display:flex;
-  flex-direction:row;
-  justify-content: space-between;
-  margin: auto;
-  width: 100%;
+/* Pour mettre les photos en ligne quand la resolution est trop petite */
+@media only screen and (max-width: 800px)
+{
+	#chambre1, #chambre2, #chambre3
+	{
+		width: 100%;
+		height: auto;
+	}
+
+	/* Aligne la photo a droite */
+	#chambre2
+	{
+		float: left;
+	}
+}
+
+
+/*Aligne les photos a gauche */
+#chambre1, #chambre3
+{
+	float: left;
 }
 
 #chambres{
   display: flex;
 }
-.quartier{
-  background-image:url("../images/")
+
+section
+{
+	flex: 1 0 auto;
+	margin-top: 90px;
 }
-
-
-
-
-
-/*.burger{
-  background-image: url('images/hall.jpg');
-  background-repeat: no-repeat;
-  max-width:100%;
-  height: 400px;
-  background-size:cover
-  }*/
-
 
 .image-hôtel{
   display: block;
@@ -77,8 +124,6 @@ header{
   margin: 0;
 
 }
-
-
 
 /*bannière en entête image de fond, 1ère image a l'horizontal, permet de mettre l'image côte à côte*/
 #mission {
@@ -96,24 +141,6 @@ header{
 }
 
 /*mettre le text sur l'image */
-.debut{
-  display:inline-block;
-  position: relative;
-
-}
-.debut {
-  position: absolute;
-  text-align:center;
-  font-family: georgia;
-  font-size: 19px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  background: rgb(0, 0, 0,);
-  color: black;
-  margin-top: 3%;
-}
-
 /*text sur une image*/
 .debut .content{
   position: absolute;
@@ -132,10 +159,9 @@ header{
 /*mettre le text sur l'image */
 .debut{
   display:inline-block;
-  position: relative;
-
 }
-.debut .text{
+
+.debut{
   position: absolute;
   text-align:center;
   font-family: georgia;
@@ -143,9 +169,7 @@ header{
   left: 0;
   right: 0;
   margin: 0 auto;
-  background: rgb(0, 0, 0,);
   color: black;
-  margin-top: 3%;
 }
 /*text sur une image*/
 .debut .content{
@@ -160,14 +184,17 @@ header{
 .debut img{ vertical-align:middle;}
 /*fin text sur image*/
 
+footer
+{
+	flex-shrink: 0;
+	text-align: center;
+}
 
 
 
 
 /*flottement d'images, trois contenaires d'images;100/3=33,33%; deux images(100/2=50%) et 4 images(100/4=25%)*/
-*{
-  box-sizing: border-box;
-}
+
 .column{
   float: left;/*propriété float images cote à cote*/
   width: 33.33%;
